@@ -21,6 +21,7 @@ public class UserController {
 
     @GetMapping("/find")
     public String findAll(){
+        System.out.println(1);
         List<User> userList = userService.findAll();
         String result = JSON.toJSONStringWithDateFormat(userList, "yyyy-MM-dd HH:mm:ss");
         System.out.println(result.toString());
