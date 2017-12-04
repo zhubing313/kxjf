@@ -23,6 +23,7 @@ public class UserController {
     public String findAll(){
         List<User> userList = userService.findAll();
         String result = JSON.toJSONStringWithDateFormat(userList, "yyyy-MM-dd HH:mm:ss");
+        System.out.println(result.toString());
         return result;
     }
 
